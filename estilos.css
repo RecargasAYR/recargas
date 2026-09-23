@@ -1,0 +1,158 @@
+/* Configuración base */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Degradado de azul oscuro a púrpura */
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #4c1d95 100%);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Iniciales gigantes fijas en el fondo de la pantalla */
+body::before {
+    content: "A & Y";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25vw; /* Tamaño gigantesco basado en la pantalla */
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03); /* Color blanco casi transparente */
+    z-index: -1; /* Lo manda detrás de todo el contenido */
+    white-space: nowrap;
+    pointer-events: none; /* Evita que interfiera con los clics */
+    letter-spacing: -10px;
+}
+
+/* Contenedor de bienvenida */
+.contenedor-principal {
+    background-color: rgba(255, 255, 255, 0.95); /* Blanco ligeramente translúcido */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 450px;
+    margin-top: 12vh;
+    margin-bottom: 8vh;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    color: #1e1b4b; /* Azul muy oscuro para el título */
+    font-size: 28px;
+    margin-top: 0;
+}
+
+p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Botón principal adaptado al estilo púrpura */
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #6d28d9, #4f46e5); /* Degradado púrpura a azul */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(109, 40, 217, 0.3);
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(109, 40, 217, 0.5);
+}
+
+/* Sección de precios */
+.seccion-precios {
+    width: 90%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.seccion-precios h2 {
+    color: #1e1b4b;
+    border-bottom: 3px solid #6d28d9; /* Línea púrpura */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Distribución en cuadrícula para los juegos */
+.cuadricula-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta de cada juego */
+.tarjeta-juego {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.tarjeta-juego:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(109, 40, 217, 0.15);
+    border-color: #6d28d9; /* Se ilumina el borde en púrpura */
+}
+
+.tarjeta-juego h3 {
+    margin-top: 0;
+    color: #4f46e5; /* Azul eléctrico para el nombre del juego */
+    font-size: 18px;
+}
+
+.tarjeta-juego p {
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.nota {
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 30px;
+    color: #6b7280;
+}
+
+/* Botón de WhatsApp */
+.boton-whatsapp {
+    display: block;
+    margin-top: 18px;
+    padding: 10px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-whatsapp:hover {
+    background-color: #128c7e;
+    transform: scale(1.02);
+}
